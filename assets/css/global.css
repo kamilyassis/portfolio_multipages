@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --cor-primaria: white;
+    --cor-secundaria: black;
+    --cor-primaria-letras: black(255, 255, 255);
+    --cor-secundaria-letras: white;
+    --cor-primaria-fundo: #020066;
+    --pilulas-fundo: #ff00bf;
+    --pilulas-letras: white;
+    --pilulas-sombra: #85084d;
+    --cor-borda-galeria: #9ffcff;
+}
+
+
+/*Partes que quero igual para todo codigo*/
+
+/*Navegação*/
+
+.navegacao{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+  }
+  
+  .navegacao ul li{
+    margin: 60px 0;
+  }
+  
+  .navegacao ul li:first-child{
+    margin-top: 0;
+  
+  }
+  
+  .navegacao ul li:last-child{
+    margin-bottom: 0;
+  
+  }
+  
+  .navegacao ul li a{
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    z-index: 1;
+  }
+  
+  .navegacao::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--cor-primaria);
+    z-index: 0;
+  }
+  
+  .navegacao ul{
+    z-index: 0;
+  }
+  
+  .navegacao ul li a:hover,
+  .navegacao ul li a:active{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+  }
+  
+  .navegacao__icone{
+    width: 100%;
+    position: absolute;
+    margin-bottom: 556%; /*medida temporaria. Ajusta a seta, mas só localmente, não é responsivo*/
+  }
+  
+  .navegacao__icone img{
+    width: 50%; /*para combinar com a linha*/
+  }
+
+/*Pilulas de info das descrições*/
+
+.pilulas ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.pilulas ul li{
+    background-color: var(--pilulas-fundo);
+    color: rgba(218, 218, 218, 0.877);
+    padding: 5px 15px;
+    list-style: none;
+    margin: 0 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    box-shadow: var(--pilulas-sombra) 2px 2px 2px inset;
+}
+
+.pilulas ul li:first-child{
+    margin-left: 0;
+}
+
+/*configurações da galeria de imgs*/
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galeria .imagem {
+    flex: 1 1 calc(33.333% - 10px);
+    margin-bottom: 10px;
+}
+
+.galeria .imagem img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

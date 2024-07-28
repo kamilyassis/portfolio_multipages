@@ -1,0 +1,90 @@
+@import url(reset.css);
+@import url(global.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #00135e;
+  background-image: 
+  url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #47474780;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.top {
+  text-align: center;
+  padding: 20px;
+}
+
+.top h1 {
+  font-size: 4rem;
+  color: #00135e !important;
+  text-shadow: #ffffffab 2px 2px 2px, #ffffffab -2px -2px 2px;
+}
+
+.top p {
+  font-size: 0.8rem;
+  
+  color: #00135e !important;
+  text-shadow: #ffffffab 2px 2px 2px;
+}
+
+.bottom {
+  padding: 20px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria img {
+  max-width: 30%;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.botao-voltar {
+  border: none;
+  padding: 15px 32px; 
+  text-align: center;
+  display: inline-block;
+  font-size: 16px; 
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px; 
+  transition: background-color 0.3s; 
+}
+
+.botao-voltar:hover {
+  background-color: #005f73; 
+}

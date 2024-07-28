@@ -1,0 +1,159 @@
+@import url('/assets/css/reset.css');
+@import url('/assets/css/global.css');
+
+body::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/background_inicio.webp');                
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+body{
+    background-color: var(--cor-primaria-fundo);
+}
+
+.menu{
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu__item{
+    display: inline-block;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.822) 0.1rem 0.1rem 0.1rem;
+    margin: 0 1.25rem;
+    padding-bottom: 30px;
+}
+
+.menu__icon img{
+    width: 2.5rem;
+    margin: 0 1.25rem;
+    vertical-align: middle;
+}
+
+.conteudo{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    border: 0.5rem solid var(--cor-primaria);
+    width: calc(100% / 3 - 8%);
+    height: 70vh;
+    position: relative;
+    transition: filter 0.3s;
+}
+
+.card__background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 1;    
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;    
+    transition: 0.6s ease-in-out;
+}
+
+.card__titulo{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    transition: bottom 0.5s ease-in-out;    
+    transition: 0.7s;
+}
+
+.controlador__linha{
+    background-color: var(--cor-primaria);
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    margin-top: 50px;
+}
+
+/*animações*/
+
+.card--hovered .card__background{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.card--hovered .card__image{
+    transform: scale(1.4);
+    filter: drop-shadow(20px 10px 4px rgba(0, 0, 0, 0.7));
+}
+
+
+/*Animação escala de cinza*/
+
+.card:hover {
+    filter: none;
+}
+
+.conteudo:hover .card {
+    filter: grayscale(100%);
+}
+
+.conteudo:hover .card:hover {
+    filter: none;
+}
+
+.card--hovered .card__titulo{
+    transform: scale(1.5);
+    bottom: 10%;
+}
+
+/*tirei, mas se precisar depois, já tem*/
+.controlador{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+
+.controlador__botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--cor-primaria);
+    background-color: var(--cor-primaria-fundo);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    
+    transition: transform 0.4s ease-in-out;
+}
+
+.controlador__botao:hover{
+    transform: scale(1.2);
+}
+
+.controlador__botao:nth-child(2){
+    margin: 0 3.75rem;
+}

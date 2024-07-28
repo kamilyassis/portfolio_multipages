@@ -1,0 +1,68 @@
+@import url('reset.css');
+@import url('global.css');
+
+body{
+  background-color: black;
+}
+
+.estojo{
+  display: flex;
+  height: 100vh;
+  flex-flow: row nowrap;
+}
+
+.estojo .coluna_esquerda{
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding-right: 50px;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.estojo .conteudo_principal{
+  width: 100%;
+  background-image: url('../images/background_inicio.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 100px;
+}
+
+.estojo .conteudo_principal__superior{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.conteudo_principal__superior__info{
+  margin-top: 120px;
+  margin-left: 30px;
+}
+
+.conteudo_principal__superior__info h1{
+  font-size: 5em;
+  color: var(--cor-primaria);
+  text-shadow: black 2px 2px 2px;
+}
+
+.conteudo_principal__superior__info p{
+  font-size: 1.5em;
+  color: var(--cor-primaria);
+  line-height: 170%;
+  text-shadow: black 2px 2px 2px;
+}
+
+.descricao{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: auto;
+  max-width: 57%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
